@@ -1,0 +1,27 @@
+{
+    "name": "jxlau\/meituan-pub-union",
+    "description": "美团分销联盟 PHP-SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jxlau",
+            "email": "liuzhixing@applepi.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "GaoweiSpace\\MeituanPubUnion\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GaoweiSpace\\MeituanPubUnion\\ServiceProvider"
+            ]
+        }
+    }
+}
