@@ -6,7 +6,7 @@
 ## 安装
 
 ```shell
-$ composer require gaowei-space/meituan-pub-union -vvv
+$ composer require jxlau/meituan-pub-union
 ```
 
 ## 配置
