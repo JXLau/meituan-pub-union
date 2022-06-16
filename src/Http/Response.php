@@ -40,7 +40,7 @@ class Response
     /**
      * @return int
      */
-    public function getStatusCode(): int
+    public function getStatusCode()
     {
         return $this->statusCode;
     }
@@ -48,7 +48,7 @@ class Response
     /**
      * @param int $statusCode
      */
-    public function setStatusCode(int $statusCode): void
+    public function setStatusCode(int $statusCode)
     {
         $this->statusCode = $statusCode;
     }
@@ -64,7 +64,7 @@ class Response
     /**
      * @param array $headers
      */
-    public function setHeaders(array $headers): void
+    public function setHeaders(array $headers)
     {
         $this->headers = $headers;
     }
@@ -72,7 +72,7 @@ class Response
     /**
      * @return string
      */
-    public function getBody(): string
+    public function getBody()
     {
         return $this->body;
     }
@@ -80,7 +80,7 @@ class Response
     /**
      * @param string $body
      */
-    public function setBody(string $body): void
+    public function setBody(string $body)
     {
         $this->body = $body;
     }
@@ -88,7 +88,7 @@ class Response
     /**
      * @return array|null
      */
-    public function getContent(): ?array
+    public function getContent()
     {
         if ($this->content === null) {
             $this->content = json_decode($this->getBody(), true);
@@ -99,7 +99,7 @@ class Response
     /**
      * @param array|null $content
      */
-    public function setContent($content): void
+    public function setContent($content)
     {
         $this->content = $content;
     }

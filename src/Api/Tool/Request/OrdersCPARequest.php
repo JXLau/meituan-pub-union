@@ -39,7 +39,7 @@ class OrdersCPARequest extends Request
     {
     }
 
-    protected function setUserParams(&$params): void
+    protected function setUserParams(&$params)
     {
         // 必传参数
         $this->setUserParam($params, "page", $this->page);
@@ -61,22 +61,22 @@ class OrdersCPARequest extends Request
         !is_null($this->endTime) && $this->setUserParam($params, 'endTime', $this->endTime);
     }
 
-    public function getVersion(): string
+    public function getVersion()
     {
         return "1.0";
     }
 
-    public function getDataType(): string
+    public function getDataType()
     {
         return "json";
     }
 
-    public function getApiAction(): string
+    public function getApiAction()
     {
         return '/data/promote/verify/cpa';
     }
 
-    public function getMethod(): string
+    public function getMethod()
     {
         return "get";
     }

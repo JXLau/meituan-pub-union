@@ -96,7 +96,7 @@ class Client
      * @param integer $val
      * @return void
      */
-    public function setTimeOut(int $val): void
+    public function setTimeOut(int $val)
     {
         $this->clientOptions['timeout'] = $val;
     }
@@ -107,7 +107,7 @@ class Client
      * @param array $clientOptions
      * @return void
      */
-    public function setClientOptions(array $clientOptions): void
+    public function setClientOptions(array $clientOptions)
     {
         $this->clientOptions = $clientOptions;
     }
@@ -117,7 +117,7 @@ class Client
      *
      * @return HttpResponse 接口返回信息
      */
-    public function syncInvoke(Request $request): HttpResponse
+    public function syncInvoke(Request $request)
     {
         $this->_setRequestCommonQuery($request);
 
@@ -134,7 +134,7 @@ class Client
      * @param Request $request
      * @return void
      */
-    private function _setRequestCommonQuery(Request $request): void
+    private function _setRequestCommonQuery(Request $request)
     {
         $current = time();
         $this->requestCommonQuery['requestId']   = (string) rand(1, 99999999);
@@ -149,7 +149,7 @@ class Client
      *
      * @return string
      */
-    private function _encrypt($data): string
+    private function _encrypt($data)
     {
         $str = openssl_encrypt($data, 'AES-128-ECB', $this->appKey);
         return bin2hex(base64_decode($str));
@@ -161,7 +161,7 @@ class Client
      * @param Request $request
      * @return void
      */
-    private function _setRequestOptions(Request $request): void
+    private function _setRequestOptions(Request $request)
     {
         $this->requestOptions = [
             'query'   => $this->_getQuery($request->getParamsMap()),
@@ -179,7 +179,7 @@ class Client
      * @param array $params
      * @return array
      */
-    private function _getQuery(array $params): array
+    private function _getQuery(array $params)
     {
         return array_merge($params, $this->requestCommonQuery);
     }
@@ -189,7 +189,7 @@ class Client
      *
      * @return array
      */
-    private function _getRequestHeaders(): array
+    private function _getRequestHeaders()
     {
         $headers = [
             "Cache-Control"               => "no-cache",
@@ -206,7 +206,7 @@ class Client
      *
      * @return \GuzzleHttp\Client
      */
-    private function _getHttpClient(): \GuzzleHttp\Client
+    private function _getHttpClient()
     {
         return new GuzzleHttpClient($this->_getClientOptions());
     }
@@ -216,7 +216,7 @@ class Client
      *
      * @return array
      */
-    private function _getClientOptions(): array
+    private function _getClientOptions()
     {
         $default_options = [
             'timeout'  => self::$TIME_OUT,
@@ -232,7 +232,7 @@ class Client
      * @param Response $response
      * @return HttpResponse
      */
-    private function _setSelfResponse(Response $response): HttpResponse
+    private function _setSelfResponse(Response $response)
     {
         $self_response = new HttpResponse();
         $self_response->setStatusCode($response->getStatusCode());
@@ -248,7 +248,7 @@ class Client
      *
      * @return HttpResponse
      */
-    private function _handle(Request $request): HttpResponse
+    private function _handle(Request $request)
     {
         try {
             $response = $this->_getHttpClient()->request($request->getMethod(), $request->getApiAction(), $this->requestOptions);

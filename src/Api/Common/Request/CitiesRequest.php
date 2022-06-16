@@ -22,38 +22,38 @@ class CitiesRequest extends Request
     {
     }
 
-    protected function setUserParams(&$params): void
+    protected function setUserParams(&$params)
     {
         $this->setUserParam($params, "platformId", $this->platformId);
         $this->setUserParam($params, "provinceId", $this->provinceId);
     }
 
-    public function getVersion(): string
+    public function getVersion()
     {
         return "1.0";
     }
 
-    public function getDataType(): string
+    public function getDataType()
     {
         return "json";
     }
 
-    public function getApiAction(): string
+    public function getApiAction()
     {
         return sprintf("api/province/%s/cities", $this->provinceId);
     }
 
-    public function getMethod(): string
+    public function getMethod()
     {
         return "get";
     }
 
-    public function setPlatformId(int $platformId): void
+    public function setPlatformId(int $platformId)
     {
         $this->platformId = $platformId;
     }
 
-    public function setProvinceId(int $provinceId): void
+    public function setProvinceId(int $provinceId)
     {
         $this->provinceId = $provinceId;
     }

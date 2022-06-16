@@ -17,7 +17,7 @@ class SeckillListRequest extends Request
 {
     protected $promotionId;
 
-    protected function setUserParams(&$params): void
+    protected function setUserParams(&$params)
     {
         //必填
         $this->setUserParam($params, "cityId", $this->cityId);
@@ -34,72 +34,72 @@ class SeckillListRequest extends Request
         $this->promotionId && $this->setUserParam($params, "promotionId", $this->promotionId);
     }
 
-    public function getVersion(): string
+    public function getVersion()
     {
         return "1.0";
     }
 
-    public function getDataType(): string
+    public function getDataType()
     {
         return "json";
     }
 
-    public function getApiAction(): string
+    public function getApiAction()
     {
         return 'api/seckill/list';
     }
 
-    public function getMethod(): string
+    public function getMethod()
     {
         return "get";
     }
 
-    public function setCityId(int $cityId): void
+    public function setCityId(int $cityId)
     {
         $this->cityId = $cityId;
     }
 
-    public function setPlatformId(int $platformId): void
+    public function setPlatformId(int $platformId)
     {
         $this->platformId = $platformId;
     }
 
-    public function setShowId(int $showId): void
+    public function setShowId(int $showId)
     {
         $this->showId = $showId;
     }
 
-    public function setPhone(string $phone): void
+    public function setPhone(string $phone)
     {
         $this->phone = $phone;
     }
 
-    public function setOs(int $os): void
+    public function setOs(int $os)
     {
         $this->os = $os;
     }
 
-    public function setLat($lat): void
+    public function setLat($lat)
     {
         $this->os = $lat;
     }
 
-    public function setLng($lng): void
+    public function setLng($lng)
     {
         $this->lng = $lng;
     }
 
-    public function setPage(int $page): void
+    public function setPage(int $page)
     {
         $this->page = $page;
     }
 
-    public function setUtmMedium(string $utmMedium): void
+    public function setUtmMedium(string $utmMedium)
     {
         $this->utmMedium = $utmMedium;
     }
 
-    public function setPromotionId(string $promotionId): void
+    public function setPromotionId(string $promotionId)
     {
         $this->promotionId = $promotionId;
     }

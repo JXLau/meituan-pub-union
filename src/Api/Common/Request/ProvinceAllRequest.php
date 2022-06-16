@@ -22,32 +22,32 @@ class ProvinceAllRequest extends Request
     {
     }
 
-    protected function setUserParams(&$params): void
+    protected function setUserParams(&$params)
     {
         $this->setUserParam($params, "platformId", $this->platformId);
     }
 
-    public function getVersion(): string
+    public function getVersion()
     {
         return "1.0";
     }
 
-    public function getDataType(): string
+    public function getDataType()
     {
         return "json";
     }
 
-    public function getApiAction(): string
+    public function getApiAction()
     {
         return "api/province/all";
     }
 
-    public function getMethod(): string
+    public function getMethod()
     {
         return "get";
     }
 
-    public function setPlatformId(int $platformId): void
+    public function setPlatformId(int $platformId)
     {
         $this->platformId = $platformId;
     }

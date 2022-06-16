@@ -30,7 +30,7 @@ class LinksRequest extends Request
     {
     }
 
-    protected function setUserParams(&$params): void
+    protected function setUserParams(&$params)
     {
         // 必传参数
         $this->setUserParam($params, "promotionId", $this->promotionId);
@@ -44,57 +44,57 @@ class LinksRequest extends Request
         !is_null($this->demandQrInfo) && $this->setUserParam($params, "demandQrInfo", $this->demandQrInfo);
     }
 
-    public function getVersion(): string
+    public function getVersion()
     {
         return "1.0";
     }
 
-    public function getDataType(): string
+    public function getDataType()
     {
         return "json";
     }
 
-    public function getApiAction(): string
+    public function getApiAction()
     {
         return '/api/promotion/link';
     }
 
-    public function getMethod(): string
+    public function getMethod()
     {
         return "post";
     }
 
-    public function setUtmMedium(string $utmMedium): void
+    public function setUtmMedium(string $utmMedium)
     {
         $this->utmMedium = $utmMedium;
     }
 
-    public function setUtmSource(string $utmSource): void
+    public function setUtmSource(string $utmSource)
     {
         $this->utmSource = $utmSource;
     }
 
-    public function setPromotionId(string $promotionId): void
+    public function setPromotionId(string $promotionId)
     {
         $this->promotionId = $promotionId;
     }
 
-    public function setActivity(string $activity): void
+    public function setActivity(string $activity)
     {
         $this->activity = $activity;
     }
 
-    public function setPageLevel(int $pageLevel): void
+    public function setPageLevel(int $pageLevel)
     {
         $this->pageLevel = $pageLevel;
     }
 
-    public function setUserLevel(float $userLevel): void
+    public function setUserLevel(float $userLevel)
     {
         $this->userLevel = $userLevel;
     }
 
-    public function setDemandQrInfo(string $demandQrInfo): void
+    public function setDemandQrInfo(string $demandQrInfo)
     {
         $this->demandQrInfo = $demandQrInfo;
     }

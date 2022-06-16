@@ -22,32 +22,32 @@ class RegionsByDianPingRequest extends Request
     {
     }
 
-    protected function setUserParams(&$params): void
+    protected function setUserParams(&$params)
     {
         $this->setUserParam($params, "cityId", $this->cityId);
     }
 
-    public function getVersion(): string
+    public function getVersion()
     {
         return "1.0";
     }
 
-    public function getDataType(): string
+    public function getDataType()
     {
         return "json";
     }
 
-    public function getApiAction(): string
+    public function getApiAction()
     {
         return sprintf("api/city/%s/regions", $this->cityId);
     }
 
-    public function getMethod(): string
+    public function getMethod()
     {
         return "get";
     }
 
-    public function setCityId(int $cityId): void
+    public function setCityId(int $cityId)
     {
         $this->cityId = $cityId;
     }

@@ -22,38 +22,38 @@ class RegionsByMeiTuanRequest extends Request
     {
     }
 
-    protected function setUserParams(&$params): void
+    protected function setUserParams(&$params)
     {
         $this->setUserParam($params, "cityId", $this->cityId);
         $this->setUserParam($params, "includeHot", $this->includeHot);
     }
 
-    public function getVersion(): string
+    public function getVersion()
     {
         return "1.0";
     }
 
-    public function getDataType(): string
+    public function getDataType()
     {
         return "json";
     }
 
-    public function getApiAction(): string
+    public function getApiAction()
     {
         return sprintf("api/mt/city/%s/regions", $this->cityId);
     }
 
-    public function getMethod(): string
+    public function getMethod()
     {
         return "get";
     }
 
-    public function setCityId(int $cityId): void
+    public function setCityId(int $cityId)
     {
         $this->cityId = $cityId;
     }
 
-    public function setIncludeHot(bool $includeHot): void
+    public function setIncludeHot(bool $includeHot)
     {
         $this->includeHot = $includeHot;
     }

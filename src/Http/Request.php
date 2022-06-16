@@ -20,24 +20,24 @@ abstract class Request
     {
     }
 
-    abstract public function getVersion(): string;
+    abstract public function getVersion();
 
-    abstract public function getDataType(): string;
+    abstract public function getDataType();
 
-    abstract public function getApiAction(): string;
+    abstract public function getApiAction();
 
-    abstract public function getMethod(): string;
+    abstract public function getMethod();
 
-    abstract protected function setUserParams(&$var): void;
+    abstract protected function setUserParams(&$var);
 
-    final public function getParamsMap(): array
+    final public function getParamsMap()
     {
         $paramsMap = [];
         $this->setUserParams($paramsMap);
         return $paramsMap;
     }
 
-    final protected function setUserParam(&$paramMap, $name, $param): void
+    final protected function setUserParam(&$paramMap, $name, $param)
     {
         if (!is_null($param) && $param !== "") {
             $paramMap[$name] = $param;

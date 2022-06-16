@@ -31,7 +31,7 @@ class SearchDealsRequest extends Request
     {
     }
 
-    protected function setUserParams(&$params): void
+    protected function setUserParams(&$params)
     {
         // 必传参数
         $this->setUserParam($params, "platformId", $this->platformId);
@@ -54,97 +54,97 @@ class SearchDealsRequest extends Request
         $this->dealType && $this->setUserParam($params, "dealType", $this->dealType);
     }
 
-    public function getVersion(): string
+    public function getVersion()
     {
         return "1.0";
     }
 
-    public function getDataType(): string
+    public function getDataType()
     {
         return "json";
     }
 
-    public function getApiAction(): string
+    public function getApiAction()
     {
         return '/api/search/deals';
     }
 
-    public function getMethod(): string
+    public function getMethod()
     {
         return "post";
     }
 
-    public function setPlatformId(int $platformId): void
+    public function setPlatformId(int $platformId)
     {
         $this->platformId = $platformId;
     }
 
-    public function setUtmMedium(string $utmMedium): void
+    public function setUtmMedium(string $utmMedium)
     {
         $this->utmMedium = $utmMedium;
     }
 
-    public function setUtmSource(string $utmSource): void
+    public function setUtmSource(string $utmSource)
     {
         $this->utmSource = $utmSource;
     }
 
-    public function setPromotionId(string $promotionId): void
+    public function setPromotionId(string $promotionId)
     {
         $this->promotionId = $promotionId;
     }
 
-    public function setPage(int $page): void
+    public function setPage(int $page)
     {
         $this->page = $page;
     }
 
-    public function setSize(int $size): void
+    public function setSize(int $size)
     {
         $this->size = $size;
     }
 
-    public function setCat0Id(int $cat0Id): void
+    public function setCat0Id(int $cat0Id)
     {
         $this->cat0Id = $cat0Id;
     }
 
-    public function setCat1Id(int $cat1Id): void
+    public function setCat1Id(int $cat1Id)
     {
         $this->cat1Id = $cat1Id;
     }
 
-    public function setGeo(array $geo): void
+    public function setGeo(array $geo)
     {
         $this->geo = $geo;
     }
 
-    public function setSortType(int $sortType): void
+    public function setSortType(int $sortType)
     {
         $this->sortType = $sortType;
     }
 
-    public function setShopIds(array $shopIds): void
+    public function setShopIds(array $shopIds)
     {
         $this->shopIds = $shopIds;
     }
 
-    public function setDealIds(array $dealIds): void
+    public function setDealIds(array $dealIds)
     {
         $this->dealIds = $dealIds;
     }
 
-    public function setFilters(array $filters): void
+    public function setFilters(array $filters)
     {
         $this->filters = $filters;
     }
 
-    public function setDealType(int $dealType): void
+    public function setDealType(int $dealType)
     {
         $this->dealType = $dealType;
     }
 
-    public function setKeyWords(string $keyWords): void
+    public function setKeyWords(string $keyWords)
     {
         $this->keyWords = $keyWords;
     }

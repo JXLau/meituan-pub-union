@@ -24,44 +24,44 @@ class CategoriesRequest extends Request
     {
     }
 
-    protected function setUserParams(&$params): void
+    protected function setUserParams(&$params)
     {
         $this->setUserParam($params, "platformId", $this->platformId);
         $this->setUserParam($params, "cityId", $this->cityId);
         $this->setUserParam($params, "cat0Id", $this->cat0Id);
     }
 
-    public function getVersion(): string
+    public function getVersion()
     {
         return "1.0";
     }
 
-    public function getDataType(): string
+    public function getDataType()
     {
         return "json";
     }
 
-    public function getApiAction(): string
+    public function getApiAction()
     {
         return sprintf("api/city/%s/categories", $this->cityId);
     }
 
-    public function getMethod(): string
+    public function getMethod()
     {
         return "get";
     }
 
-    public function setPlatformId(int $platformId): void
+    public function setPlatformId(int $platformId)
     {
         $this->platformId = $platformId;
     }
 
-    public function setCityId(int $cityId): void
+    public function setCityId(int $cityId)
     {
         $this->cityId = $cityId;
     }
 
-    public function setCat0Id(int $cat0Id): void
+    public function setCat0Id(int $cat0Id)
     {
         $this->cat0Id = $cat0Id;
     }
