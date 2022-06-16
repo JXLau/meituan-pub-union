@@ -143,4 +143,9 @@ class SearchDealsRequest extends Request
     {
         $this->dealType = $dealType;
     }
+
+    public function setKeyWords(string $keyWords): void
+    {
+        $this->keyWords = $keyWords;
+    }
 }
